@@ -32,7 +32,7 @@ proguard/
 
 # OSX files
 .DS_Store
- 
+
 # Windows files
 Thumbs.db
 *.bak

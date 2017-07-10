@@ -48,4 +48,3 @@ interface AppliveryApiService {
   @POST("$API_VERSION/auth/customLogin")
   fun bindUser(@Body bindUserRequest: BindUserRequest): Call<ApiLoginResponse>
 }
-

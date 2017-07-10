@@ -5,7 +5,7 @@
 [![Download](https://api.bintray.com/packages/applivery/maven/applivery-android-sdk/images/download.svg)](https://bintray.com/applivery/maven/applivery-android-sdk/_latestVersion)
 [![Twitter](https://img.shields.io/badge/twitter-@Applivery-blue.svg?style=flat)](https://twitter.com/Applivery)
 
-### Quality checks 
+### Quality checks
 [![codecov.io](https://codecov.io/github/applivery/applivery-android-sdk/coverage.svg?branch=develop)](https://codecov.io/github/applivery/applivery-android-sdk)
 
 Framework to support [Applivery.com Mobile App distribution](http://www.applivery.com) for Android Apps.
@@ -56,7 +56,7 @@ implementation 'com.applivery:applivery-sdk:3.0.10'
 [![](https://jitpack.io/v/Applivery/applivery-android-sdk.svg)](https://jitpack.io/#Applivery/applivery-android-sdk)
 
 Add the following repository to your's root gradle:
- 
+
  ```groovy
    allprojects {
      repositories {
@@ -72,7 +72,7 @@ Add the following dependency to your app gradle:
       implementation 'com.github.Applivery:applivery-android-sdk:v3.0.10'
     }
   ```
-  
+
 ### Gradle with Nexus/MavenCentral dependency
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.applivery/applivery-sdk/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Capplivery)
@@ -98,9 +98,9 @@ At your application startup, in a class extending from `Application`, you must c
  ```
 
 This method is intended to initialize the Applivery SDK. The only thing you have to take care about is that this call **MUST** be performed in App's `onCreate()` Method.
- 
+
 **IMPORTANT:** As you can suspect, you should replace the `APP_TOKEN` string with you app token. Easy! Don't you think so?
- 
+
 ### Step 2
 Once initialized the SDK and **once your App is stable in the Home Screen** you have to call proactivelly the following method in order to check for new updates:
 ```java
@@ -113,7 +113,7 @@ Applivery.checkForUpdates()
 - **appToken**: Your app token from applivery dashboard
 - **isStoreRelease**: is the last param and the aim of this flag is to mark if the build will be submitted to Store. This is needed to prevent unwanted behavior like prompt to a final user that a new version is available on Applivery.com.
 	* True: Applivery SDK will not trigger automatic updates anymore. **Use this for Play Store**
-	* False: Applivery SDK will normally. Use this with builds distributed through Applivery. 
+	* False: Applivery SDK will normally. Use this with builds distributed through Applivery.
 
 ## Advanced concepts
 
@@ -125,7 +125,7 @@ Manually check for updates:
 Applivery.checkForUpdates()
 ```
 
-Check for updates when coming from background 
+Check for updates when coming from background
 ```java
 Applivery.setCheckForUpdatesBackground(true)
 ```
@@ -149,7 +149,7 @@ Applivery.disableShakeFeedback();
 
 ### Bind user
 
-Programatically login a user in Applivery, for example if the app has a custom login and don't 
+Programatically login a user in Applivery, for example if the app has a custom login and don't
 want to use Applivery's authentication to track the user in the platform
 
 ```java
@@ -176,13 +176,13 @@ In order to customize the appearance of the UI, you can make a new resource file
   <color name="applivery_secondary_color">#ffffff</color>
   <color name="applivery_primary_font_color">#ffffff</color>
   <color name="applivery_secondary_font_color">#444444</color>
-  
+
   <color name="applivery_drawing_color">#ffbb33</color>
 
   <string name="appliveryUpdate">Update!</string>
   <string name="appliveryUpdateMsg">There is a new version available for downloadInfo! Do you want to update to the latest version?</string>
   <string name="appliveryMustUpdateAppLocked">You must update.</string>
-  
+
   <string name="appliveryLoginFailDielogTitle">Invalid credentials</string>
   <string name="appliveryLoginFailDielogText">The email or password you entered is not valid</string>
 </resources>

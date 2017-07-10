@@ -81,4 +81,3 @@ class BindUserInteractor(
         private const val TAG = "BindUserInteractor"
     }
 }
-

@@ -81,4 +81,3 @@ class LoginInteractor(
         private const val TAG = "LoginInteractor"
     }
 }
-
